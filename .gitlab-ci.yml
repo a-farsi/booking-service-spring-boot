@@ -20,6 +20,9 @@ build:
   image: gradle:7.6-jdk17
   script:
     - ./gradlew clean build
+  artifacts:
+    paths:
+      - build/libs/booking-service.jar
 
 # Étape 3 : Docker build & push
 docker:
