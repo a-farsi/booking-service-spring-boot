@@ -53,7 +53,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-jar {
+bootJar {
     archiveBaseName.set('booking-service')
     archiveVersion.set('')
 }
