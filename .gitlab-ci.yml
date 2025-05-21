@@ -37,3 +37,7 @@ docker:
     - docker push $DOCKER_IMAGE
   only:
     - main
+
+# Étape 4 : Déploiement Docker Compose + Tests
+
+# Etape 5 : Déploiement Kubernetes + Tests
