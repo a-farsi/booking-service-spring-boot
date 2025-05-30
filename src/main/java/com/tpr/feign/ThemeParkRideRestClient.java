@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.tpr.model.ThemeParkRide;
 
-@FeignClient(name = "themeparkride-service")
+@FeignClient(name = "themeparkride-service", url = "${themeparkride-service.url}")
 public interface ThemeParkRideRestClient {
 	@GetMapping("/rides/{id}")
 	ThemeParkRide getThemeParkRideById(@PathVariable Long id);
