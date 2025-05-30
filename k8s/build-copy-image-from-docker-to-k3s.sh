@@ -13,6 +13,9 @@ echo "Image BUILD complete!"
 # Sauvegarder l'image en tar
 docker save $IMAGE_NAME:$TAG -o $IMAGE_NAME.tar
 
+# Supprimer l'image docker du cluster k3s
+sudo k3s ctr images rm docker.io/library/$IMAGE_NAME:$TAG
+
 # Charger l'image sur tous les noeuds K3s
 sudo k3s ctr images import $IMAGE_NAME.tar
 
